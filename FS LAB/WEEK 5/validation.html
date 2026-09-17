@@ -1,0 +1,47 @@
+<html>
+<head><title> form validation</title>
+</head>
+<body>
+<form onsubmit="return validateForm()">
+
+    <label>Name:</label>
+    <input type="text" id="name">
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email">
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="error"></p>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let error = document.getElementById("error");
+
+    error.innerHTML = "";
+
+    if (name === "") {
+        error.innerHTML = "Name is required";
+        return false;
+    }
+
+    if (email === "") {
+        error.innerHTML = "Email is required";
+        return false;
+    }
+
+    alert("Form submitted successfully");
+    return true;
+}
+</script>
+</body>
+</html>

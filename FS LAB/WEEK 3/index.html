@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Index-page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+       <style>
+        body{
+            background-color: wheat;
+           
+            display: flex;
+            justify-content: center;
+             align-content: center;
+            
+        }
+        .box{
+            background-color: aliceblue;
+            width: 80%;
+            height: 80%;+
+            align-self: center;
+            border-radius: 20px;
+            display: flex;
+           flex-direction: column;
+           
+
+            
+        }
+        .box h1{
+            margin-left: 150px;
+            margin-bottom: 0px;
+
+            
+        }
+        #inpt{
+            height: 50px;
+            width: 50%;
+            align-self: center;
+            
+        }
+        #btn{
+            background-color: grey;
+           
+            width: 20%;
+            height: 50px;
+        }
+        .input1{
+            display: inline-block;
+            margin-top: 50px;
+            margin-left: 150px;
+          
+        }
+        ol{
+            list-style-type: none ;
+        }
+        .student{
+               background-color: lightblue;
+               display: flex;
+            width: 80%;
+              align-items: center;
+              padding: 10px;
+              margin: 10px;
+              justify-content: space-between;
+
+        }
+       
+     
+        #total{
+            margin-left: 150px;
+        }
+        #delbtn{
+            height: 40px;
+            background-color: red;
+            color: aliceblue;
+            
+        }
+       </style>
+    </head>
+    <body>
+        <div class="box">
+        <h1 >Student  Name Manager</h1>
+        <div class="input1">
+        <input type="text" id="inpt" placeholder="Enter student name">
+        <button onclick="addStudent()"id="btn">Add Student</button>
+        </div>  
+        <h2 id="total">Total Students: 0</h2>  
+    </div>
+    <script>
+        const students=[];
+        function addStudent(){
+            let name=document.getElementById("inpt").value.trim();
+            if(name==""){
+                alert("Name cannot be emptyy!!");
+                return;
+            }
+            if(students.includes(name)){
+                alert("Student already exists!!");
+                return;
+            }
+            students.push(name);
+            let list=document.getElementById("total");
+            list.innerHTML="";
+            if(students.length==0){
+               list.innerHTML="Total Students: 0";
+            }
+            else{
+                list.innerHTML="Total Students: "+students.length;
+                list.innerHTML+="<ol>"
+                students.forEach(function (n,i){
+            list.innerHTML+=`<li class="student"><span>${i+1}.${n}</span>
+                <button onclick="delStudent(${i})" id="delbtn">Delete</button>
+                </li>`;
+                })
+                 list.innerHTML+="</ol>"
+            }
+        }
+        function delStudent(index){
+            students.splice(index,1);
+             let list=document.getElementById("total");
+            list.innerHTML="";
+            if(students.length==0){
+               list.innerHTML="Total Students: 0";
+            }
+            else{
+                list.innerHTML="Total Students: "+students.length;
+                list.innerHTML+="<ol>"
+                students.forEach(function (n,i){
+            list.innerHTML+=`<li class="student"><span>${i+1}.${n}</span>
+                <button onclick="delStudent(${i})" id="delbtn">Delete</button>
+                </li>`;
+                })
+                 list.innerHTML+="</ol>"
+            }
+
+        }
+       
+
+    </script> 
+    </body>
+</html>

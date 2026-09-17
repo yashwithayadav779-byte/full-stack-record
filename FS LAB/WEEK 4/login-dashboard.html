@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Login-Page</title>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: aliceblue;
+                background-image: url("./bgimage.jpg");
+            }
+            .heading{
+                text-decoration: solid;
+                color:white;
+                text-align: center;
+                padding-top: 20px;
+            }
+            .container{
+                margin-left: auto;
+                margin-right: auto;
+                height: 300px;
+                width: 300px;
+                background-color: lightsteelblue;
+                box-shadow: 10px 10px 20px grey;
+                border-radius: 20px;
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                margin-top: 80px;
+                
+            }
+            .container h3{
+                align-self: center;
+
+            }
+            input{
+                display: block;
+                margin-left: 10%;
+                margin-right: 10%;
+                height: 30px;
+            }
+            #btn{
+                background-color: blue;
+                position: relative;
+               width:80%;
+                align-self: center;
+                margin-top: px;
+                color: white;
+                height: 30px;
+               
+            }
+            label{
+                margin-top: 20px;
+                color: blue;
+                  margin-left: 10%;
+                margin-right: 10%;
+            }
+            #error{
+                color: crimson;
+               
+                align-self: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="heading">ANITS - Central Placement Portal</h1>
+        <div class="container">
+            <h3>User Login</h3>
+            <label>Username</label>
+            <input type="text" id="name1" placeholder="Enter your username">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your Password">
+              <p id="error"></p>
+            <button onclick="loginValidity()" id="btn">Login</button>
+          
+        </div>
+        <script>
+           function loginValidity(){
+           let uname=document.getElementById("name1").value.trim();
+            let password=document.getElementById("password").value.trim();
+            let defaultUname="Shanmukh";
+            let defaultPassword="ShannuHas2024";
+            let error=document.getElementById("error");
+            error.innerHTML="";
+            if(uname==""){
+                error.innerHTML="*UserName is required";
+                return;
+            }
+            if(password==""){
+                error.innerHTML="*Password is required";
+                return;
+            }
+            if(uname==defaultUname && password==defaultPassword){
+                window.location.href="success.html";
+            }
+            else{
+                error.innerHTML="<b>Invalid UserName or Password.</b>";
+            }
+        }
+        </script>
+    </body>
+</html>

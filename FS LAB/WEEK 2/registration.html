@@ -1,0 +1,222 @@
+<html>
+  <head>
+        <title>Anits-Registration</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Anits college">
+        <meta name="author" content="Lasya">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <header>
+      
+        <img src="img.jpg">
+        
+        <div class="title">
+
+        <h1>Anil Neerukonda Institute of Technology & Sciences</h1>
+        <h3><b>Campus Placement Portal</b></h3>
+        
+        </div>
+    </header>
+   <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="companies.html">Companies</a>
+    <a href="contact.html">Contact</a>
+   </nav>
+   <div align="center">
+    <h1>Student Registration</h1>
+   </div>
+   <form action="success.html">
+   <fieldset class="box2">
+    <legend>Personal Information</legend>
+
+    <table border="1px" width="100%">
+        <tr>
+            <td>Full Name</td>
+            <td><input type="text" id="name" name="name" placeholder="Enter your name" required></td>
+        </tr>
+        <tr> 
+            <td>Password</td>
+            <td><input type="password" id="password" name="password" placeholder="Enter password" required></td>
+        </tr>
+        <tr>
+            <td>Email Address</td>
+            <td><input type="email" id="mail" name="mail" placeholder="abc@example.com" required></td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td><input type="number" id="phn" name="phn" placeholder="9876543210" required></td>
+        </tr>
+        <tr>
+           <td>Age</td>
+           <td><input type="number" id="age" name="age" required></td>
+        </tr>
+        <tr>
+            <td>Date Of Birth</td>
+            <td><input type="date" id="date" name="date" required></td>
+
+        </tr>
+        <tr>
+            <td>Preferred Time</td>
+            <td><input type="time" id="time" name="time" required></td>
+        </tr>
+
+        <tr>
+           <td>Registration Date & Time</td>
+           <td><input type="datetime-local" id="DateTime" name="DateTime" required></td>
+
+        </tr>
+
+    </table>
+
+
+
+   </fieldset>
+   <fieldset class="box2">
+   <legend>Academic Information</legend>
+
+    <table border="1px" width="100%">
+        <tr>
+            <td>Department</td>
+            <td><select id="Department" name="Department" required>
+                <option>CSE</option>
+                <option>CSM</option>
+                <option>CSD</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>MECH</option>
+                <option>IT</option>
+                <option>CHEM</option>
+            </select></td>
+        </tr>
+        <tr> 
+            <td>Programming Language</td>
+            <td><label>
+    <input type="checkbox" name="pl" value="C" >
+    C
+</label><br>
+
+<label>
+    <input type="checkbox" name="pl" value="C++">
+    C++
+</label><br>
+
+<label>
+    <input type="checkbox" name="pl" value="Java">
+    Java
+</label><br>
+<label>
+    <input type="checkbox" name="pl" value="Python">Python
+</label>
+<br>
+</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender" value="Male">Male<br>
+            <input type="radio" name="gender" value="Female">Female<br>
+            <input type="radio" name="gender" value="Other">Other<br>
+        </td>
+        </tr>
+        
+ <tr> 
+            <td>Skills</td>
+            <td>
+              <label>
+    <input type="checkbox" name="skills" value="HTML">HTML
+</label>
+<br>  
+                <label>
+    <input type="checkbox" name="skills" value="C">
+    C
+</label><br>
+
+<label>
+    <input type="checkbox" name="skills" value="C++">
+    C++
+</label><br>
+
+<label>
+    <input type="checkbox" name="skills" value="Java">
+    Java
+</label><br>
+<label>
+    <input type="checkbox" name="skills" value="Python">Python
+</label>
+<br>
+
+</td>
+        </tr>
+
+
+    </table>
+   </fieldset>
+
+   <fieldset class="box2">
+    <legend>Online Information</legend>
+
+    <table border="1px" width="100%">
+        <tr>
+            <td>Portfolio Website</td>
+            <td><input type="text" id="url" name="url" placeholder="https://example.com" required></td>
+        </tr>
+        <tr>
+            <td>Search Course</td>
+            <td><input type="text" id="cname" name="cname" placeholder="Search Course" required></td>
+        </tr>
+ 
+         <tr>
+    <td>Upload Resume</td>
+    <td>
+        <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Programming Skill Level</td>
+    <td>
+        Beginner
+        <input type="range" name="skill" min="0" max="10" value="5" required>
+        Expert
+    </td>
+</tr>
+
+
+
+
+        <tr>
+          <td>Address</td> 
+            <td><input type="text" id="home_address" name="home_address" placeholder="Enter your address" required></td>
+
+        </tr>
+
+</table>
+</fieldset>
+    <fieldset class="box2">
+    <legend>Declaration</legend>
+   
+            <input type="checkbox" name="agree" value="agree" required><br>
+    I hereby declare that the information provided above is true and correct.
+
+      
+    
+</fieldset>
+
+<div class="register-buttons">
+    <button type="submit" class="butn">Register</button>
+    <button type="reset" class="butn">Reset</button>
+</div>
+
+   </form>
+
+<div class="f1">
+<footer>
+    <p>&copy; 2026 ANITS | Department of Training and Placement</p>
+   </footer>
+</div>    
+
+
+</html>
