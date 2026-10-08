@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #243047;
+}
+
+.page {
+  max-width: 1150px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.form-box,
+.data-box {
+  background: white;
+  padding: 25px;
+  margin: 0 auto 25px;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #cbdcf610;
+}
+
+.form-box {
+  max-width: 650px;
+}
+
+h1, h2 {
+  color: #1e3a5f;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form > label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5dce7;
+  border-radius: 6px;
+  font: inherit;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #3975e8;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 5px 0;
+}
+
+.row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Larger radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3268d8;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  background: #3268d8;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2453b7;
+}
+
+form button[type="button"] {
+  background: #e9edf5;
+  color: #344054;
+}
+
+.message {
+  margin-top: 15px;
+  padding: 12px;
+  background: #edf8f0;
+  border-radius: 6px;
+  color: #216738;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.data-box {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead {
+  background: #edf2fa;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+tbody tr:hover {
+  background: #f8faff;
+}
+
+td button:last-child {
+  background: #dc4545;
+}
+
+td button:last-child:hover {
+  background: #b92f2f;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 15px 10px;
+  }
+
+  .form-box, .data-box {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
