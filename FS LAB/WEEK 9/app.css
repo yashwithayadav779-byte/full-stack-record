@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5f9;
+}
+
+nav {
+background: #23439a;
+color: white;
+padding: 18px 5%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+nav h2 {
+margin: 0;
+text-align: center;
+}
+
+nav div {
+position: absolute;
+right: 5%;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+}
+
+
+/* Home */
+
+.home {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.home h1 {
+  color: #23439a;
+  font-size: 45px;
+}
+
+.home p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Events */
+
+#events {
+  text-align: center;
+  padding: 40px;
+}
+
+#events h2,
+.registration h2,
+.about h2 {
+  color: #23439a;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.events div {
+  background: white;
+  padding: 25px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px #ccc;
+}
+
+/* Registration */
+
+.registration {
+  background: white;
+  width: 500px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px #ccc;
+}
+
+.registration h2 {
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background: #23439a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #172f73;
+}
+
+/* About */
+
+.about {
+  text-align: center;
+  padding: 50px;
+  background: #e8edf8;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
